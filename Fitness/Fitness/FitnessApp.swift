@@ -16,7 +16,7 @@ struct FitnessApp: App {
         WindowGroup {
 //            ContentView(activity: Activity(id: 0, title: "Daily Steps", subtitle: "Goal: 10,000", amount: "6,453"))
 //                .environmentObject(manager)
-            MainPageView()
+            LoginView()
                 .environmentObject(manager)
         }
     }
