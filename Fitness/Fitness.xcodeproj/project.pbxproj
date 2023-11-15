@@ -54,7 +54,6 @@
 		E07711B92B0380D800572C4A = {
 			isa = PBXGroup;
 			children = (
-				E080AD2F2B05123500A0EC77 /* random */,
 				E07711C42B0380D800572C4A /* Fitness */,
 				E07711C32B0380D800572C4A /* Products */,
 			);
@@ -73,6 +72,7 @@
 			children = (
 				E0BEAB4E2B03C7F000D21890 /* Fitness.entitlements */,
 				E07711C52B0380D800572C4A /* FitnessApp.swift */,
+				E080AD2F2B05123500A0EC77 /* random */,
 				E0BEAB542B03E17600D21890 /* Views */,
 				E094E8E52B056D4600AE3B69 /* Store */,
 				E07711C92B0380D900572C4A /* Assets.xcassets */,
