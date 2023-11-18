@@ -8,7 +8,45 @@
 import SwiftUI
 
 struct GoalSelectorView: View {
-    @State var counter: Int = 120
+    @Binding var counter: Int
+    @State private var isLongPressing = false
+    @State private var timer: Timer?
+    @State private var durata = 0.0
+    
+    func startTimer(increase: Bool) {
+        timer = Timer.scheduledTimer(withTimeInterval: 0.3, repeats: true) { timer in
+            if increase {
+                counter += 10
+            } else {
+                counter -= 10
+            }
+            durata += 0.2
+            
+            if durata >= 1 {
+                stopTimer()
+                startFastTimer(increase: increase)
+            }
+        }
+        isLongPressing = true
+    }
+    
+    func startFastTimer(increase: Bool) {
+        timer = Timer.scheduledTimer(withTimeInterval: 0.1, repeats: true) { timer in
+            if increase {
+                counter += 10
+            } else {
+                counter -= 10
+            }
+        }
+    }
+    
+    func stopTimer() {
+        timer?.invalidate()
+        timer = nil
+        isLongPressing = false
+        durata = 0
+    }
+    
     var body: some View {
         VStack{
             HStack{
@@ -22,16 +60,13 @@ struct GoalSelectorView: View {
                         }
                         print(counter)
                     }
-                    .gesture(
-                        LongPressGesture()
-                            .onChanged { _ in
-                                self.counter += 10
-                                print(counter)
-                            }
-                            .onEnded { _ in
-                                print(counter)
-                            }
-                    )
+                    .onLongPressGesture(minimumDuration: 5, pressing: { isPressing in
+                        if isPressing {
+                            startTimer(increase: false)
+                        } else {
+                            stopTimer()
+                        }
+                    }){}
                 
                 Text("\(counter)")
                     .font(.system(size: 70))
@@ -46,24 +81,21 @@ struct GoalSelectorView: View {
                         self.counter += 10
                         print(counter)
                     }
-                    .gesture(
-                        LongPressGesture()
-                            .onChanged { _ in
-                                self.counter += 10
-                                print(counter)
-                            }
-                            .onEnded { _ in
-                                print(counter)
-                            }
-                    )
+                    .onLongPressGesture(minimumDuration: 5, pressing: { isPressing in
+                        if isPressing {
+                            startTimer(increase: true)
+                        } else {
+                            stopTimer()
+                        }
+                    }){}
             }
-            Text("KILOCALORIES/DAY")
-                .font(.title2)
-                .fontWeight(.black)
         }
+        Text("KILOCALORIES/DAY")
+            .font(.title2)
+            .fontWeight(.black)
     }
 }
 
-#Preview {
-    GoalSelectorView()
-}
+//#Preview {
+//    GoalSelectorView(counter: $counter)
+//}
