@@ -10,9 +10,9 @@ import SwiftData
 
 @main
 struct FitnessApp: App {
-    
+    @StateObject private var sharedData = SharedData()
     @StateObject var healthKitManager = HealthKitManager()
-    //@StateObject var manager = HealthManager()
+    
     var body: some Scene {
         WindowGroup {
             MainPageView()
@@ -27,7 +27,7 @@ struct FitnessApp: App {
                 }
         }
         .modelContainer(for: User.self)
-        .modelContainer(for: Goal.self)
+        .environmentObject(sharedData)
     }
 }
 

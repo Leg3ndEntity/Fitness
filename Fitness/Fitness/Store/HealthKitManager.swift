@@ -27,27 +27,6 @@ class HealthKitManager: NSObject, ObservableObject {
     @Published var stepValue: Int = 0
     @Published var walkDistance: Int = 0
     
-    //    init(){
-    //        let steps = HKQuantityType(.stepCount)
-    //        let calories = HKQuantityType(.activeEnergyBurned)
-    //        let workout = HKQuantityType(.appleExerciseTime)
-    //        let stand = HKQuantityType(.appleStandTime)
-    //        let healthType: Set = [steps, calories, workout, stand]
-    //
-    //        Task{
-    //            do{
-    //                try await healthStore.requestAuthorization(toShare: [], read: healthType)
-    //                startEnergyQuery(quantityTypeIdentifier: .activeEnergyBurned)
-    //                startExerciseQuery(quantityTypeIdentifier: .appleExerciseTime)
-    //                startStandQuery(quantityTypeIdentifier: .appleStandTime)
-    //                startStepQuery(quantityTypeIdentifier: .stepCount)
-    //            } catch {
-    //                print("error fetching health data")
-    //            }
-    //        }
-    //    }
-    
-    
     func requestAuthorization() {
         let typesToRead: Set = [
             HKQuantityType.quantityType(forIdentifier: .activeEnergyBurned)!,

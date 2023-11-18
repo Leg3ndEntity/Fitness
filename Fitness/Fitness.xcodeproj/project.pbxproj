@@ -12,7 +12,6 @@
 		E027F3EF2B07FA8900A2F661 /* HealthKitManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = E027F3EE2B07FA8900A2F661 /* HealthKitManager.swift */; };
 		E04661172B075A4B00F72A1D /* FSCalendar in Frameworks */ = {isa = PBXBuildFile; productRef = E04661162B075A4B00F72A1D /* FSCalendar */; };
 		E046611A2B075A7A00F72A1D /* MKRingProgressView in Frameworks */ = {isa = PBXBuildFile; productRef = E04661192B075A7A00F72A1D /* MKRingProgressView */; };
-		E04661202B0766A000F72A1D /* RingView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E046611F2B0766A000F72A1D /* RingView.swift */; };
 		E07711C62B0380D800572C4A /* FitnessApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = E07711C52B0380D800572C4A /* FitnessApp.swift */; };
 		E07711CA2B0380D900572C4A /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = E07711C92B0380D900572C4A /* Assets.xcassets */; };
 		E07711CD2B0380D900572C4A /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = E07711CC2B0380D900572C4A /* Preview Assets.xcassets */; };
@@ -24,7 +23,9 @@
 		E094E8E12B054A1F00AE3B69 /* AnimationView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E094E8E02B054A1F00AE3B69 /* AnimationView.swift */; };
 		E094E8E92B057D9300AE3B69 /* LoginView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E094E8E82B057D9300AE3B69 /* LoginView.swift */; };
 		E094E8EB2B0580BB00AE3B69 /* GoalView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E094E8EA2B0580BB00AE3B69 /* GoalView.swift */; };
-		E0A34B182B08E2E500E8AA93 /* Goal.swift in Sources */ = {isa = PBXBuildFile; fileRef = E0A34B172B08E2E500E8AA93 /* Goal.swift */; };
+		E0A34B1C2B092AA700E8AA93 /* ActivityView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E0A34B1B2B092AA700E8AA93 /* ActivityView.swift */; };
+		E0A34B222B0937ED00E8AA93 /* CalendarView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E0A34B212B0937ED00E8AA93 /* CalendarView.swift */; };
+		E0A34B242B09438C00E8AA93 /* BlurView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E0A34B232B09438C00E8AA93 /* BlurView.swift */; };
 		E0B2CF142B066F0500F3B7E7 /* User.swift in Sources */ = {isa = PBXBuildFile; fileRef = E0B2CF132B066F0500F3B7E7 /* User.swift */; };
 		E0BEAB4D2B03C6B700D21890 /* HealthManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = E0BEAB4C2B03C6B700D21890 /* HealthManager.swift */; };
 		E0BEAB502B03D51A00D21890 /* CardView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E0BEAB4F2B03D51A00D21890 /* CardView.swift */; };
@@ -37,7 +38,6 @@
 		E027F3EB2B07F38D00A2F661 /* ActivityRingView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ActivityRingView.swift; sourceTree = "<group>"; };
 		E027F3ED2B07FA3600A2F661 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist; path = Info.plist; sourceTree = "<group>"; };
 		E027F3EE2B07FA8900A2F661 /* HealthKitManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HealthKitManager.swift; sourceTree = "<group>"; };
-		E046611F2B0766A000F72A1D /* RingView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RingView.swift; sourceTree = "<group>"; };
 		E07711C22B0380D800572C4A /* Fitness.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Fitness.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		E07711C52B0380D800572C4A /* FitnessApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FitnessApp.swift; sourceTree = "<group>"; };
 		E07711C92B0380D900572C4A /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
@@ -50,7 +50,9 @@
 		E094E8E02B054A1F00AE3B69 /* AnimationView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AnimationView.swift; sourceTree = "<group>"; };
 		E094E8E82B057D9300AE3B69 /* LoginView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginView.swift; sourceTree = "<group>"; };
 		E094E8EA2B0580BB00AE3B69 /* GoalView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GoalView.swift; sourceTree = "<group>"; };
-		E0A34B172B08E2E500E8AA93 /* Goal.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Goal.swift; sourceTree = "<group>"; };
+		E0A34B1B2B092AA700E8AA93 /* ActivityView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ActivityView.swift; sourceTree = "<group>"; };
+		E0A34B212B0937ED00E8AA93 /* CalendarView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CalendarView.swift; sourceTree = "<group>"; };
+		E0A34B232B09438C00E8AA93 /* BlurView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BlurView.swift; sourceTree = "<group>"; };
 		E0B2CF132B066F0500F3B7E7 /* User.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = User.swift; sourceTree = "<group>"; };
 		E0BEAB4C2B03C6B700D21890 /* HealthManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HealthManager.swift; sourceTree = "<group>"; };
 		E0BEAB4E2B03C7F000D21890 /* Fitness.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = Fitness.entitlements; sourceTree = "<group>"; };
@@ -78,6 +80,8 @@
 				E027F3EB2B07F38D00A2F661 /* ActivityRingView.swift */,
 				E080AD342B05161D00A0EC77 /* ActivityCardView.swift */,
 				E00A61B32B08C528008F1A25 /* GoalSelectorView.swift */,
+				E0A34B212B0937ED00E8AA93 /* CalendarView.swift */,
+				E0A34B232B09438C00E8AA93 /* BlurView.swift */,
 			);
 			path = Components;
 			sourceTree = "<group>";
@@ -126,6 +130,7 @@
 			isa = PBXGroup;
 			children = (
 				E0BEAB4C2B03C6B700D21890 /* HealthManager.swift */,
+				E094E8E02B054A1F00AE3B69 /* AnimationView.swift */,
 				E0BEAB512B03D6EF00D21890 /* PolloView.swift */,
 				E0BEAB552B03E1D000D21890 /* ChartView.swift */,
 				E0BEAB4F2B03D51A00D21890 /* CardView.swift */,
@@ -138,7 +143,6 @@
 			children = (
 				E027F3EE2B07FA8900A2F661 /* HealthKitManager.swift */,
 				E0B2CF132B066F0500F3B7E7 /* User.swift */,
-				E0A34B172B08E2E500E8AA93 /* Goal.swift */,
 			);
 			path = Store;
 			sourceTree = "<group>";
@@ -150,10 +154,9 @@
 				E094E8EA2B0580BB00AE3B69 /* GoalView.swift */,
 				E080AD302B05128100A0EC77 /* TabBar.swift */,
 				E080AD322B05156C00A0EC77 /* MainPageView.swift */,
+				E0A34B1B2B092AA700E8AA93 /* ActivityView.swift */,
 				E080AD2B2B04CF3100A0EC77 /* ModalView.swift */,
 				E080AD2D2B04DACD00A0EC77 /* AccountView.swift */,
-				E094E8E02B054A1F00AE3B69 /* AnimationView.swift */,
-				E046611F2B0766A000F72A1D /* RingView.swift */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -236,7 +239,6 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				E04661202B0766A000F72A1D /* RingView.swift in Sources */,
 				E080AD332B05156C00A0EC77 /* MainPageView.swift in Sources */,
 				E027F3EC2B07F38D00A2F661 /* ActivityRingView.swift in Sources */,
 				E080AD2C2B04CF3100A0EC77 /* ModalView.swift in Sources */,
@@ -248,11 +250,13 @@
 				E0B2CF142B066F0500F3B7E7 /* User.swift in Sources */,
 				E094E8E92B057D9300AE3B69 /* LoginView.swift in Sources */,
 				E080AD2E2B04DACD00A0EC77 /* AccountView.swift in Sources */,
+				E0A34B1C2B092AA700E8AA93 /* ActivityView.swift in Sources */,
+				E0A34B222B0937ED00E8AA93 /* CalendarView.swift in Sources */,
 				E00A61B42B08C528008F1A25 /* GoalSelectorView.swift in Sources */,
 				E0BEAB562B03E1D000D21890 /* ChartView.swift in Sources */,
-				E0A34B182B08E2E500E8AA93 /* Goal.swift in Sources */,
 				E094E8E12B054A1F00AE3B69 /* AnimationView.swift in Sources */,
 				E094E8EB2B0580BB00AE3B69 /* GoalView.swift in Sources */,
+				E0A34B242B09438C00E8AA93 /* BlurView.swift in Sources */,
 				E0BEAB502B03D51A00D21890 /* CardView.swift in Sources */,
 				E080AD352B05161D00A0EC77 /* ActivityCardView.swift in Sources */,
 			);

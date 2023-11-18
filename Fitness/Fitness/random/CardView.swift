@@ -7,13 +7,13 @@
 //
 //import SwiftUI
 //
-//struct Activity: Identifiable{
-//    let id: Int
-//    let title: String
-//    let subtitle: String
-//    let image: String
-//    let amount: String
-//}
+struct Activity: Identifiable{
+    let id: Int
+    let title: String
+    let subtitle: String
+    let image: String
+    let amount: String
+}
 //
 //struct CardView: View {
 //    @State var activity: Activity
@@ -68,6 +68,62 @@
 //            .fontWeight(.semibold)
 //    }
 //}
+//
+//#Preview {
+//    CardView(activity: Activity(id: 0, title: "Daily Steps", subtitle: "Goal: 10,000", image: "figure.walk", amount: "6,752"))
+////    InfoView(activity: Activity(id: 0, title: "Daily Steps", subtitle: "Goal: 10,000", image: "figure.walk", amount: "6,752"))
+//}
+//
+////import SwiftUI
+////
+////struct Bho: View{
+////    var body: some View{
+////        ZStack(alignment: .top) {
+////            BlurView(style: .dark).edgesIgnoringSafeArea(.top)
+////            VStack {
+////                HStack {
+////                    ForEach(0..<ActivityData.weekdays.count) { item in
+////                        VStack(spacing: 5) {
+////                            Text("\(ActivityData.weekdays[item].firstLetter)")
+////                                .font(Font.system(size: 10, weight: .regular, design: .default))
+////                                .foregroundColor(Color.white)
+////                            ZStack {
+////                                RingView(
+////                                    percentage: ActivityData.weekdays[item].standPercentage,
+////                                    backgroundColor: Color.standRingWeekdayBackground,
+////                                    startColor: Color.standRingStartColor,
+////                                    endColor: Color.standRingEndColor,
+////                                    thickness: Constants.weekdayRingThickness
+////                                )
+////                                    .frame(width: 20, height: 20)
+////                                    .aspectRatio(contentMode: .fit)
+////                                RingView(
+////                                    percentage: ActivityData.weekdays[item].exercisePercentage,
+////                                    backgroundColor: Color.exerciseRingWeekdayBackground,
+////                                    startColor: Color.exerciseRingStartColor,
+////                                    endColor: Color.exerciseRingEndColor,
+////                                    thickness: Constants.weekdayRingThickness
+////                                )
+////                                    .frame(width: 30, height: 30)
+////                                    .aspectRatio(contentMode: .fit)
+////                                RingView(
+////                                    percentage: ActivityData.weekdays[item].movePercentage,
+////                                    backgroundColor: Color.moveRingWeekdayBackground,
+////                                    startColor: Color.moveRingStartColor,
+////                                    endColor: Color.moveRingEndColor,
+////                                    thickness: Constants.weekdayRingThickness
+////                                )
+////                                    .frame(width: 40, height: 40)
+////                                    .aspectRatio(contentMode: .fit)
+////                            }
+////                        }
+////                    }
+////                }
+////            }
+////        }
+////            .frame(width: geometrySize.width, height: Constants.navigationBarHeight, alignment: .top)
+////    }
+////}
 //
 //#Preview {
 //    CardView(activity: Activity(id: 0, title: "Daily Steps", subtitle: "Goal: 10,000", image: "figure.walk", amount: "6,752"))

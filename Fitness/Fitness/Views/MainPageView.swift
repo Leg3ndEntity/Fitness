@@ -11,6 +11,7 @@ struct MainPageView: View {
     let currentDateTime = Date()
     @State var isShowingAccount: Bool = false
     @State var isShowingLogin: Bool = true
+    @State var isShowingGoal: Bool = true
     @State var scrollViewOffset: CGFloat = 0
     
     func formattedDate(date: Date) -> String {
@@ -44,7 +45,9 @@ struct MainPageView: View {
                             .font(.title)
                             .fontWeight(.bold)
                     }
-                    ActivityCardView()
+                    NavigationLink(destination: ActivityView()){
+                        ActivityCardView()
+                    }
                 }
             }.scrollIndicators(.hidden)
             
@@ -56,6 +59,9 @@ struct MainPageView: View {
 //        .fullScreenCover(isPresented: $isShowingLogin, content: {
 //            LoginView(height: "", weight: "")
 //        })
+        .fullScreenCover(isPresented: $isShowingGoal, content: {
+            GoalView()
+        })
     }
 }
 

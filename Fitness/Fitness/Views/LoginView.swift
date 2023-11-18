@@ -35,19 +35,19 @@ struct LoginView: View {
     }
     
     var selectedText: String {
-            switch num2 {
-            case 1:
-                return "Not Set"
-            case 2:
-                return "Female"
-            case 3:
-                return "Male"
-            case 4:
-                return "Other"
-            default:
-                return ""
-            }
+        switch num2 {
+        case 1:
+            return "Not Set"
+        case 2:
+            return "Female"
+        case 3:
+            return "Male"
+        case 4:
+            return "Other"
+        default:
+            return ""
         }
+    }
     
     var body: some View {
         ScrollView{

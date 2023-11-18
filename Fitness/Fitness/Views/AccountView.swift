@@ -52,7 +52,7 @@ struct AccountView: View {
                     Text("Date of Birth")
                     Spacer()
                     Text(formattedDate(date: userData[0].birthDate))
-                     
+                    
                 }
                 HStack{
                     Text("Sex")
