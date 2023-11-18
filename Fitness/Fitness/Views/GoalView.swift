@@ -8,7 +8,7 @@
 import SwiftUI
 
 struct GoalView: View {
-    
+    @EnvironmentObject var healthKitManager: HealthKitManager
     @Environment(\.dismiss) var dismiss
     @State var num = 1
     @State private var selectedMode = 1
@@ -63,10 +63,6 @@ struct GoalView: View {
                     .fontWeight(.bold)
                     .foregroundStyle(Color(.label))
             } .padding(.top, 200)
-            
-            
-            
-            
         }
     }
 }

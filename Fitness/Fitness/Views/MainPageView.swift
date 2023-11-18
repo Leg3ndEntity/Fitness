@@ -53,9 +53,9 @@ struct MainPageView: View {
         .sheet(isPresented: $isShowingAccount, content: {
             ModalView().presentationDetents([.large])
         })
-        .fullScreenCover(isPresented: $isShowingLogin, content: {
-            LoginView(height: "", weight: "")
-        })
+//        .fullScreenCover(isPresented: $isShowingLogin, content: {
+//            LoginView(height: "", weight: "")
+//        })
     }
 }
 

@@ -12,7 +12,7 @@ import SwiftData
 struct FitnessApp: App {
     
     @StateObject var healthKitManager = HealthKitManager()
-    @StateObject var manager = HealthManager()
+    //@StateObject var manager = HealthManager()
     var body: some Scene {
         WindowGroup {
             MainPageView()
@@ -27,6 +27,7 @@ struct FitnessApp: App {
                 }
         }
         .modelContainer(for: User.self)
+        .modelContainer(for: Goal.self)
     }
 }
 

@@ -10,7 +10,6 @@ import SwiftUI
 struct ActivityCardView: View {
 
     @EnvironmentObject var healthKitManager: HealthKitManager
-    let redColor = Color(#colorLiteral(red: 0.9803921569, green: 0.06666666667, blue: 0.3137254902, alpha: 1))
     
     var body: some View {
         
@@ -31,7 +30,7 @@ struct ActivityCardView: View {
                                     .fontWeight(.bold)
                                 Spacer()
                             }.frame(width: 150)
-                                .foregroundColor(redColor)
+                                .foregroundColor(.ringColor1)
                         }
                         VStack(alignment: .leading, spacing: 0){
                             Text("Steps")
