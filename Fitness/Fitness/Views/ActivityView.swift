@@ -71,7 +71,7 @@ struct ActivityView: View {
                                         .fontWeight(.bold)
                                         .foregroundColor(.gray)
                                 }
-                            }.padding(.trailing, 100)
+                            }.padding(.trailing, 135)
                         }
                     }
                 }.navigationTitle("Today, \(formattedDate(date: currentDateTime))")
