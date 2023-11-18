@@ -33,8 +33,6 @@ struct CalendarView: View {
             ZStack {
                 Text("F")
                     .padding(.bottom, 80)
-                Circle()
-                    .foregroundColor(.ringColor1)
                 RingView(percentage: 0.5, backgroundColor: .ringColor2, startColor: .ringColor1, endColor: .ringColor3, thickness: 10)
             }
             ZStack {
