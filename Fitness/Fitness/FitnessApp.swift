@@ -6,18 +6,28 @@
 //
 
 import SwiftUI
+import SwiftData
 
 @main
 struct FitnessApp: App {
     
-     @StateObject var manager = HealthManager()
-    
+    @StateObject var healthKitManager = HealthKitManager()
+    @StateObject var manager = HealthManager()
     var body: some Scene {
         WindowGroup {
-//            ContentView(activity: Activity(id: 0, title: "Daily Steps", subtitle: "Goal: 10,000", amount: "6,453"))
-//                .environmentObject(manager)
-            LoginView()
-                .environmentObject(manager)
+//            MainPageView()
+//                .environmentObject(healthKitManager)
+//                .preferredColorScheme(.dark)
+//                .onAppear{
+//                    healthKitManager.startEnergyQuery(quantityTypeIdentifier: .activeEnergyBurned)
+////                    healthKitManager.startExerciseQuery(quantityTypeIdentifier: .appleExerciseTime)
+////                    healthKitManager.startStandQuery(quantityTypeIdentifier: .appleStandTime)
+//                    healthKitManager.startStepQuery(quantityTypeIdentifier: .stepCount)
+//                    healthKitManager.startWalkQuery(quantityTypeIdentifier: .distanceWalkingRunning)
+//                }
+            GoalSelectorView()
         }
+        .modelContainer(for: User.self)
     }
 }
+

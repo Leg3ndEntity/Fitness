@@ -7,6 +7,12 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		E00A61B42B08C528008F1A25 /* GoalSelectorView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E00A61B32B08C528008F1A25 /* GoalSelectorView.swift */; };
+		E027F3EC2B07F38D00A2F661 /* ActivityRingView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E027F3EB2B07F38D00A2F661 /* ActivityRingView.swift */; };
+		E027F3EF2B07FA8900A2F661 /* HealthKitManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = E027F3EE2B07FA8900A2F661 /* HealthKitManager.swift */; };
+		E04661172B075A4B00F72A1D /* FSCalendar in Frameworks */ = {isa = PBXBuildFile; productRef = E04661162B075A4B00F72A1D /* FSCalendar */; };
+		E046611A2B075A7A00F72A1D /* MKRingProgressView in Frameworks */ = {isa = PBXBuildFile; productRef = E04661192B075A7A00F72A1D /* MKRingProgressView */; };
+		E04661202B0766A000F72A1D /* RingView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E046611F2B0766A000F72A1D /* RingView.swift */; };
 		E07711C62B0380D800572C4A /* FitnessApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = E07711C52B0380D800572C4A /* FitnessApp.swift */; };
 		E07711CA2B0380D900572C4A /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = E07711C92B0380D900572C4A /* Assets.xcassets */; };
 		E07711CD2B0380D900572C4A /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = E07711CC2B0380D900572C4A /* Preview Assets.xcassets */; };
@@ -18,6 +24,7 @@
 		E094E8E12B054A1F00AE3B69 /* AnimationView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E094E8E02B054A1F00AE3B69 /* AnimationView.swift */; };
 		E094E8E92B057D9300AE3B69 /* LoginView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E094E8E82B057D9300AE3B69 /* LoginView.swift */; };
 		E094E8EB2B0580BB00AE3B69 /* GoalView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E094E8EA2B0580BB00AE3B69 /* GoalView.swift */; };
+		E0B2CF142B066F0500F3B7E7 /* User.swift in Sources */ = {isa = PBXBuildFile; fileRef = E0B2CF132B066F0500F3B7E7 /* User.swift */; };
 		E0BEAB4D2B03C6B700D21890 /* HealthManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = E0BEAB4C2B03C6B700D21890 /* HealthManager.swift */; };
 		E0BEAB502B03D51A00D21890 /* CardView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E0BEAB4F2B03D51A00D21890 /* CardView.swift */; };
 		E0BEAB522B03D6EF00D21890 /* PolloView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E0BEAB512B03D6EF00D21890 /* PolloView.swift */; };
@@ -25,6 +32,11 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		E00A61B32B08C528008F1A25 /* GoalSelectorView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GoalSelectorView.swift; sourceTree = "<group>"; };
+		E027F3EB2B07F38D00A2F661 /* ActivityRingView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ActivityRingView.swift; sourceTree = "<group>"; };
+		E027F3ED2B07FA3600A2F661 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist; path = Info.plist; sourceTree = "<group>"; };
+		E027F3EE2B07FA8900A2F661 /* HealthKitManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HealthKitManager.swift; sourceTree = "<group>"; };
+		E046611F2B0766A000F72A1D /* RingView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RingView.swift; sourceTree = "<group>"; };
 		E07711C22B0380D800572C4A /* Fitness.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Fitness.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		E07711C52B0380D800572C4A /* FitnessApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FitnessApp.swift; sourceTree = "<group>"; };
 		E07711C92B0380D900572C4A /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
@@ -37,6 +49,7 @@
 		E094E8E02B054A1F00AE3B69 /* AnimationView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AnimationView.swift; sourceTree = "<group>"; };
 		E094E8E82B057D9300AE3B69 /* LoginView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginView.swift; sourceTree = "<group>"; };
 		E094E8EA2B0580BB00AE3B69 /* GoalView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GoalView.swift; sourceTree = "<group>"; };
+		E0B2CF132B066F0500F3B7E7 /* User.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = User.swift; sourceTree = "<group>"; };
 		E0BEAB4C2B03C6B700D21890 /* HealthManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HealthManager.swift; sourceTree = "<group>"; };
 		E0BEAB4E2B03C7F000D21890 /* Fitness.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = Fitness.entitlements; sourceTree = "<group>"; };
 		E0BEAB4F2B03D51A00D21890 /* CardView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CardView.swift; sourceTree = "<group>"; };
@@ -49,12 +62,24 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				E046611A2B075A7A00F72A1D /* MKRingProgressView in Frameworks */,
+				E04661172B075A4B00F72A1D /* FSCalendar in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		E00A61B22B08C4D1008F1A25 /* Components */ = {
+			isa = PBXGroup;
+			children = (
+				E027F3EB2B07F38D00A2F661 /* ActivityRingView.swift */,
+				E080AD342B05161D00A0EC77 /* ActivityCardView.swift */,
+				E00A61B32B08C528008F1A25 /* GoalSelectorView.swift */,
+			);
+			path = Components;
+			sourceTree = "<group>";
+		};
 		E07711B92B0380D800572C4A = {
 			isa = PBXGroup;
 			children = (
@@ -74,9 +99,11 @@
 		E07711C42B0380D800572C4A /* Fitness */ = {
 			isa = PBXGroup;
 			children = (
+				E027F3ED2B07FA3600A2F661 /* Info.plist */,
 				E0BEAB4E2B03C7F000D21890 /* Fitness.entitlements */,
 				E07711C52B0380D800572C4A /* FitnessApp.swift */,
 				E080AD2F2B05123500A0EC77 /* random */,
+				E00A61B22B08C4D1008F1A25 /* Components */,
 				E0BEAB542B03E17600D21890 /* Views */,
 				E094E8E52B056D4600AE3B69 /* Store */,
 				E07711C92B0380D900572C4A /* Assets.xcassets */,
@@ -106,7 +133,9 @@
 		E094E8E52B056D4600AE3B69 /* Store */ = {
 			isa = PBXGroup;
 			children = (
+				E027F3EE2B07FA8900A2F661 /* HealthKitManager.swift */,
 				E0BEAB4C2B03C6B700D21890 /* HealthManager.swift */,
+				E0B2CF132B066F0500F3B7E7 /* User.swift */,
 			);
 			path = Store;
 			sourceTree = "<group>";
@@ -118,10 +147,10 @@
 				E094E8EA2B0580BB00AE3B69 /* GoalView.swift */,
 				E080AD302B05128100A0EC77 /* TabBar.swift */,
 				E080AD322B05156C00A0EC77 /* MainPageView.swift */,
-				E080AD342B05161D00A0EC77 /* ActivityCardView.swift */,
 				E080AD2B2B04CF3100A0EC77 /* ModalView.swift */,
 				E080AD2D2B04DACD00A0EC77 /* AccountView.swift */,
 				E094E8E02B054A1F00AE3B69 /* AnimationView.swift */,
+				E046611F2B0766A000F72A1D /* RingView.swift */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -142,6 +171,10 @@
 			dependencies = (
 			);
 			name = Fitness;
+			packageProductDependencies = (
+				E04661162B075A4B00F72A1D /* FSCalendar */,
+				E04661192B075A7A00F72A1D /* MKRingProgressView */,
+			);
 			productName = Fitness;
 			productReference = E07711C22B0380D800572C4A /* Fitness.app */;
 			productType = "com.apple.product-type.application";
@@ -170,6 +203,10 @@
 				Base,
 			);
 			mainGroup = E07711B92B0380D800572C4A;
+			packageReferences = (
+				E04661152B075A4B00F72A1D /* XCRemoteSwiftPackageReference "FSCalendar" */,
+				E04661182B075A7A00F72A1D /* XCRemoteSwiftPackageReference "MKRingProgressView" */,
+			);
 			productRefGroup = E07711C32B0380D800572C4A /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
@@ -196,14 +233,19 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				E04661202B0766A000F72A1D /* RingView.swift in Sources */,
 				E080AD332B05156C00A0EC77 /* MainPageView.swift in Sources */,
+				E027F3EC2B07F38D00A2F661 /* ActivityRingView.swift in Sources */,
 				E080AD2C2B04CF3100A0EC77 /* ModalView.swift in Sources */,
 				E0BEAB4D2B03C6B700D21890 /* HealthManager.swift in Sources */,
 				E080AD312B05128100A0EC77 /* TabBar.swift in Sources */,
 				E07711C62B0380D800572C4A /* FitnessApp.swift in Sources */,
 				E0BEAB522B03D6EF00D21890 /* PolloView.swift in Sources */,
+				E027F3EF2B07FA8900A2F661 /* HealthKitManager.swift in Sources */,
+				E0B2CF142B066F0500F3B7E7 /* User.swift in Sources */,
 				E094E8E92B057D9300AE3B69 /* LoginView.swift in Sources */,
 				E080AD2E2B04DACD00A0EC77 /* AccountView.swift in Sources */,
+				E00A61B42B08C528008F1A25 /* GoalSelectorView.swift in Sources */,
 				E0BEAB562B03E1D000D21890 /* ChartView.swift in Sources */,
 				E094E8E12B054A1F00AE3B69 /* AnimationView.swift in Sources */,
 				E094E8EB2B0580BB00AE3B69 /* GoalView.swift in Sources */,
@@ -346,11 +388,13 @@
 				DEVELOPMENT_TEAM = 3X88455T75;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = Fitness/Info.plist;
 				INFOPLIST_KEY_LSApplicationCategoryType = "public.app-category.healthcare-fitness";
 				INFOPLIST_KEY_NSHealthShareUsageDescription = "Allow access to use all the features";
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
+				INFOPLIST_KEY_UILaunchStoryboardName = "";
 				INFOPLIST_KEY_UIStatusBarStyle = UIStatusBarStyleDarkContent;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
@@ -379,11 +423,13 @@
 				DEVELOPMENT_TEAM = 3X88455T75;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = Fitness/Info.plist;
 				INFOPLIST_KEY_LSApplicationCategoryType = "public.app-category.healthcare-fitness";
 				INFOPLIST_KEY_NSHealthShareUsageDescription = "Allow access to use all the features";
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
+				INFOPLIST_KEY_UILaunchStoryboardName = "";
 				INFOPLIST_KEY_UIStatusBarStyle = UIStatusBarStyleDarkContent;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
@@ -422,6 +468,38 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCRemoteSwiftPackageReference section */
+		E04661152B075A4B00F72A1D /* XCRemoteSwiftPackageReference "FSCalendar" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/WenchaoD/FSCalendar.git";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 2.8.4;
+			};
+		};
+		E04661182B075A7A00F72A1D /* XCRemoteSwiftPackageReference "MKRingProgressView" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/maxkonovalov/MKRingProgressView.git";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 2.3.0;
+			};
+		};
+/* End XCRemoteSwiftPackageReference section */
+
+/* Begin XCSwiftPackageProductDependency section */
+		E04661162B075A4B00F72A1D /* FSCalendar */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = E04661152B075A4B00F72A1D /* XCRemoteSwiftPackageReference "FSCalendar" */;
+			productName = FSCalendar;
+		};
+		E04661192B075A7A00F72A1D /* MKRingProgressView */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = E04661182B075A7A00F72A1D /* XCRemoteSwiftPackageReference "MKRingProgressView" */;
+			productName = MKRingProgressView;
+		};
+/* End XCSwiftPackageProductDependency section */
 	};
 	rootObject = E07711BA2B0380D800572C4A /* Project object */;
 }

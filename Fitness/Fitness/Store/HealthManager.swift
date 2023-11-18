@@ -35,22 +35,22 @@ class HealthManager: ObservableObject{
     @Published var activities: [String: Activity] = [:]
     @Published var oneMonthChartData = [DailyStepView]()
     
-    init(){
-        let steps = HKQuantityType(.stepCount)
-        let calories = HKQuantityType(.activeEnergyBurned)
-        let healthType: Set = [steps, calories]
-        
-        Task{
-            do{
-                try await healthStore.requestAuthorization(toShare: [], read: healthType)
-                fetchTodaySteps()
-                fetchTodayCalories()
-                fetchPastMonthStepData()
-            } catch {
-                print("error fetching health data")
-            }
-        }
-    }
+//    init(){
+//        let steps = HKQuantityType(.stepCount)
+//        let calories = HKQuantityType(.activeEnergyBurned)
+//        let healthType: Set = [steps, calories]
+//        
+//        Task{
+//            do{
+//                try await healthStore.requestAuthorization(toShare: [], read: healthType)
+//                fetchTodaySteps()
+//                fetchTodayCalories()
+//                fetchPastMonthStepData()
+//            } catch {
+//                print("error fetching health data")
+//            }
+//        }
+//    }
     
     func fetchDailySteps(startDate: Date, completion: @escaping([DailyStepView]) -> Void){
         let steps = HKQuantityType(.stepCount)

@@ -8,10 +8,44 @@
 import SwiftUI
 
 struct GoalView: View {
+    
+    @State var num = 1
+    
     var body: some View {
-        Text(/*@START_MENU_TOKEN@*/"Hello, World!"/*@END_MENU_TOKEN@*/)
-        Stepper(value: /*@START_MENU_TOKEN@*//*@PLACEHOLDER=Value@*/.constant(4)/*@END_MENU_TOKEN@*/, in: /*@START_MENU_TOKEN@*//*@PLACEHOLDER=Range@*/1...10/*@END_MENU_TOKEN@*/) {
-            /*@START_MENU_TOKEN@*//*@PLACEHOLDER=Label@*/Text("Stepper")/*@END_MENU_TOKEN@*/
+        VStack {
+            VStack{
+                Text("Your Daily Move Goal")
+                    .font(.largeTitle)
+                    .fontWeight(.bold)
+                    .padding()
+                Text("Set a goal based on how active you are, or \nhow active you'd like to be, each day.")
+                    .font(.headline)
+                    .fontWeight(.regular)
+            }.multilineTextAlignment(.center)
+            
+            Picker(selection: $num, label: Text("Modality")) {
+                Text("Lightly").tag(1)
+                Text("Moderate").tag(2)
+                Text("Highly").tag(3)
+            }.pickerStyle(.segmented)
+                .frame(width: 310)
+                .padding(.vertical, 30)
+            
+            GoalSelectorView()
+            
+            ZStack {
+                RoundedRectangle(cornerRadius: 15)
+                    .frame(width:350, height:60)
+                    .foregroundColor(Color(red: 0.169, green: 0.169, blue: 0.182))
+                
+                Text("Set Move Goal")
+                    .font(.title2)
+                    .fontWeight(.bold)
+                    .foregroundStyle(Color(.label))
+            } .padding(.top, 200)
+            
+            
+            
         }
     }
 }

@@ -6,20 +6,34 @@
 //
 
 import SwiftUI
+import SwiftData
 
 struct AccountView: View {
     @State private var birthday: Date = (Calendar.current.date(byAdding: DateComponents(year: -20), to: Date()) ?? Date())
     @Environment(\.dismiss) var dismiss
     @Environment(\.colorScheme) var colorScheme
-    @State var isShowingPicker: Bool = false
     
+    @State var isShowingPicker: Bool = false
+    @State var click: Bool = false
+    
+    @State var num2 = 1
+    @State var num3 = 1
+    @State var num4 = 1
+    
+    @State var height2: String = "178"
+    @State var weight2: String = "72"
+    
+    @Query var userData: [User]
     func formattedDate(date: Date) -> String {
         let dateFormatter = DateFormatter()
         dateFormatter.dateFormat = "dd MMM yyyy"
         return dateFormatter.string(from: date)
     }
     
-    @State var click: Bool = false
+    func formattedText(bho: String) -> String{
+        return bho
+    }
+    
     var body: some View {
         ScrollView{
             VStack {
@@ -37,30 +51,23 @@ struct AccountView: View {
                 HStack{
                     Text("Date of Birth")
                     Spacer()
-                    Text(formattedDate(date: birthday))
-                        .foregroundColor(click ? /*@START_MENU_TOKEN@*/Color("AccentColor1")/*@END_MENU_TOKEN@*/ : .gray)
-                        .onTapGesture {
-                            isShowingPicker.toggle()
-                            click.toggle()
-                        }
+                    Text(formattedDate(date: userData[0].birthDate))
+                     
                 }
-                Picker(selection: .constant(1), label: Text("Sex")) {
-                    Text("Not Set").tag(1)
-                    Text("Female").tag(2)
-                    Text("Male").tag(2)
-                    Text("Other").tag(2)
+                HStack{
+                    Text("Sex")
+                    Spacer()
+                    Text(userData[0].sex)
                 }
-                Picker(selection: .constant(1), label: Text("Height")) {
-                    Text("Not Set").tag(1)
-                    ForEach(30..<275) {
-                        Text("\($0) cm")
-                    }
+                HStack{
+                    Text("Height")
+                    Spacer()
+                    Text(String(userData[0].height))
                 }
-                Picker(selection: .constant(1), label: Text("Weight")) {
-                    Text("Not Set").tag(1)
-                    ForEach(0..<454) {
-                        Text("\($0) kg")
-                    }
+                HStack{
+                    Text("Weight")
+                    Spacer()
+                    Text(String(userData[0].weight))
                 }
             }.frame(height: 250)
             ZStack {
@@ -87,5 +94,5 @@ struct AccountView: View {
 }
 
 #Preview {
-    AccountView()
+    AccountView(height2: "178", weight2: "67")
 }
