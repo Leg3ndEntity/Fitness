@@ -21,8 +21,12 @@ struct ActivityCardView: View {
     
     var body: some View {
         
-//        var percentage: Double = Double(healthKitManager.energyBurnedValue)/Double(sharedData.counter)
-//        let roundedPercentage = percentage.rounded(toPlaces: 2)
+        
+        //        var cal: Double = Double(healthKitManager.energyBurnedValue)
+        //        var goal: Double = Double(sharedData.counter)
+        let formattedTotalWalkTime = String(format: "%.2f", healthKitManager.walkDistance)
+        //        var percentage: Double = Double(healthKitManager.energyBurnedValue)/Double(sharedData.counter)
+        //        let roundedPercentage = percentage.rounded(toPlaces: 2)
         
         ZStack {
             Color(uiColor: .systemGray6)
@@ -57,7 +61,7 @@ struct ActivityCardView: View {
                             Text("Distance")
                                 .fontWeight(.bold)
                                 .foregroundColor(.white)
-                            Text("\(healthKitManager.walkDistance)KM")
+                            Text("\(formattedTotalWalkTime)KM")
                                 .font(.title3)
                                 .fontWeight(.bold)
                                 .foregroundColor(.gray)

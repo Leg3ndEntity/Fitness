@@ -8,7 +8,6 @@
 import Foundation
 import HealthKit
 
-
 extension Double {
     func fString() -> String{
         let numberFormatter = NumberFormatter()
@@ -18,20 +17,27 @@ extension Double {
     }
 }
 
+struct HourlyCalorieView: Identifiable {
+    let id = UUID()
+    let date: Date
+    let calorieCount: Double
+}
+
 class HealthKitManager: NSObject, ObservableObject {
     let healthStore = HKHealthStore()
     
+    @Published var hourlyCalorieData: [HourlyCalorieView] = []
     @Published var energyBurnedValue: Int = 0
     @Published var exercisevalue: Int = 0
     @Published var standValue: Int = 0
     @Published var stepValue: Int = 0
-    @Published var walkDistance: Int = 0
+    @Published var walkDistance: Double = 0.0
     
     func requestAuthorization() {
         let typesToRead: Set = [
             HKQuantityType.quantityType(forIdentifier: .activeEnergyBurned)!,
-            HKQuantityType.quantityType(forIdentifier: .appleExerciseTime)!,
-            HKQuantityType.quantityType(forIdentifier: .appleStandTime)!,
+            //            HKQuantityType.quantityType(forIdentifier: .appleExerciseTime)!,
+            //            HKQuantityType.quantityType(forIdentifier: .appleStandTime)!,
             HKQuantityType.quantityType(forIdentifier: .stepCount)!,
             HKQuantityType.quantityType(forIdentifier: .distanceWalkingRunning)!,
             HKObjectType.activitySummaryType()
@@ -41,10 +47,45 @@ class HealthKitManager: NSObject, ObservableObject {
             if success {
                 print("Requested authorization")
             } else {
-                // do something if error
                 print("Failed to request authorization: \(error?.localizedDescription ?? "")")
             }
         })
+    }
+    
+    func fetchHourlyCalories(completion: @escaping ([HourlyCalorieView]) -> Void) {
+        let calories = HKQuantityType.quantityType(forIdentifier: .activeEnergyBurned)!
+        
+        let calendar = Calendar.current
+        let currentDate = Date()
+        let startDate = calendar.startOfDay(for: currentDate)
+        let endDate = calendar.date(byAdding: .day, value: 1, to: startDate)!
+        
+        let interval = DateComponents(hour: 1)
+        let anchorDate = calendar.startOfDay(for: startDate)
+        
+        let query = HKStatisticsCollectionQuery(quantityType: calories, quantitySamplePredicate: nil, anchorDate: anchorDate, intervalComponents: interval)
+        
+        query.initialResultsHandler = { query, result, error in
+            guard let result = result, error == nil else {
+                print("Error fetching hourly calorie data")
+                completion([])
+                return
+            }
+            
+            var hourlyCalories = [HourlyCalorieView]()
+            
+            result.enumerateStatistics(from: startDate, to: endDate) { statistics, stop in
+                let endDate = statistics.endDate
+                let caloriesValue = statistics.sumQuantity()?.doubleValue(for: .kilocalorie()) ?? 0.0
+                hourlyCalories.append(HourlyCalorieView(date: endDate, calorieCount: caloriesValue))
+                
+                print("Date: \(endDate), Calories: \(caloriesValue)")
+            }
+            
+            completion(hourlyCalories)
+        }
+        
+        healthStore.execute(query)
     }
     
     func startEnergyQuery(quantityTypeIdentifier: HKQuantityTypeIdentifier) {
@@ -133,7 +174,7 @@ class HealthKitManager: NSObject, ObservableObject {
                 
                 DispatchQueue.main.async {
                     print("distance: \(totalWalkTime)")
-                    self.walkDistance = Int(totalWalkTime)
+                    self.walkDistance = Double(totalWalkTime)
                 }
             } else {
                 print("Failed to fetch total walk distance: \(error?.localizedDescription ?? "")")

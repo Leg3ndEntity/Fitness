@@ -13,13 +13,11 @@ import SwiftData
     var sex: String
     var weight: Double
     var height: Double
-    var goal: Int
     
-    init(birthDate: Date, sex: String, weight: Double, height: Double, goal: Int = 123) {
+    init(birthDate: Date, sex: String, weight: Double, height: Double) {
         self.birthDate = birthDate
         self.sex = sex
         self.weight = weight
         self.height = height
-        self.goal = goal
     }
 }

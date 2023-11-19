@@ -20,6 +20,8 @@ struct ActivityView: View {
     }
     
     var body: some View {
+        
+        let formattedTotalWalkTime = String(format: "%.2f", healthKitManager.walkDistance)
         NavigationStack{
             ZStack(alignment: .top){
                 ScrollView{
@@ -52,7 +54,19 @@ struct ActivityView: View {
                                     .foregroundColor(.ringColor1)
                             }.padding(.trailing, 160)
                                 .padding(.top, -65)
-                            Rectangle()
+                            
+                            
+                            ChartView()
+                                .environmentObject(healthKitManager)
+                                .frame(width: 350)
+                                .onAppear {
+                                    healthKitManager.fetchHourlyCalories { hourlyCalories in
+                                        DispatchQueue.main.async {
+                                            healthKitManager.hourlyCalorieData = hourlyCalories
+                                        }
+                                    }
+                                }
+                            
                                 .frame(width: 400, height: 80, alignment: .center)
                             HStack(spacing: 65){
                                 VStack(alignment: .leading, spacing: 0){
@@ -66,12 +80,13 @@ struct ActivityView: View {
                                 VStack(alignment: .leading, spacing: 0){
                                     Text("Distance")
                                         .fontWeight(.bold)
-                                    Text("\(healthKitManager.walkDistance)KM")
+                                    Text("\(formattedTotalWalkTime)KM")
                                         .font(.title)
                                         .fontWeight(.bold)
                                         .foregroundColor(.gray)
                                 }
-                            }.padding(.trailing, 135)
+                            }.padding(.trailing, 110)
+                                .padding(.top, 30)
                         }
                     }
                 }.navigationTitle("Today, \(formattedDate(date: currentDateTime))")

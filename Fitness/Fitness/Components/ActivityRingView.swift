@@ -16,7 +16,7 @@ struct RingView: View {
     var startColor: Color
     var endColor: Color
     var thickness: CGFloat
-
+    
     var animation: Animation {
         Animation.easeInOut(duration: 1)
     }
@@ -60,7 +60,7 @@ struct RingShape: Shape {
     
     func path(in rect: CGRect) -> Path {
         var path = Path()
-
+        
         path.addArc(
             center: CGPoint(x: rect.width / 2, y: rect.height / 2),
             radius: rect.width / 2 - thickness,
@@ -96,12 +96,12 @@ struct RingTipShape: Shape {
         let pointCenter = CGPoint(x: x, y: y)
         
         path.addEllipse(in:
-            CGRect(
-                x: pointCenter.x - thickness / 2,
-                y: pointCenter.y - thickness / 2,
-                width: thickness,
-                height: thickness
-            )
+                            CGRect(
+                                x: pointCenter.x - thickness / 2,
+                                y: pointCenter.y - thickness / 2,
+                                width: thickness,
+                                height: thickness
+                            )
         )
         
         return path

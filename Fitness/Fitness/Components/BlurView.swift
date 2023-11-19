@@ -8,9 +8,9 @@
 import SwiftUI
 
 struct BlurView: UIViewRepresentable {
-
+    
     let style: UIBlurEffect.Style
-
+    
     func makeUIView(context: UIViewRepresentableContext<BlurView>) -> UIView {
         let containerView = UIView()
         containerView.backgroundColor = .clear
@@ -22,9 +22,9 @@ struct BlurView: UIViewRepresentable {
         blurView.widthAnchor.constraint(equalTo: containerView.widthAnchor).isActive = true
         return containerView
     }
-
+    
     func updateUIView(_ uiView: UIView, context: UIViewRepresentableContext<BlurView>) {}
-
+    
 }
 
 #Preview {

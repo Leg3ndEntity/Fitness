@@ -5,28 +5,11 @@
 //  Created by Simone Sarnataro on 18/11/23.
 //
 
-import Foundation
 import SwiftUI
 
 struct CalendarView: View {
     
-    let currentDateTime = Date()
-    @State var daySelector: Bool = false
-    func formattedDate(date: Date) -> String {
-        let dateFormatter = DateFormatter()
-        dateFormatter.dateFormat = "EEEE"
-        return dateFormatter.string(from: date)
-    }
-    
     var body: some View {
-        
-        @State var day = formattedDate(date: currentDateTime)
-        if day == "Sunday"{
-            return AnyView(Rectangle())
-        } else {
-            return AnyView(Text("Not Friday"))
-        }
-        
         HStack(spacing: 0){
             ZStack {
                 Text("M")
