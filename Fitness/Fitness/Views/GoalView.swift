@@ -71,9 +71,9 @@ struct GoalView: View {
                     dismiss()
                 }
         }
-//        .sheet(isPresented: $isShowingLogin, content: {
-//            LoginView(height: "", weight: "")
-//        })
+        .sheet(isPresented: $isShowingLogin, content: {
+            LoginView(height: "", weight: "")
+        })
     }
 }
 

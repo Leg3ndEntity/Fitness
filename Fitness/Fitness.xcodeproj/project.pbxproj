@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		E0071B212B0A109000E55EC5 /* BarChartView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E0071B202B0A109000E55EC5 /* BarChartView.swift */; };
+		E0071B242B0A110400E55EC5 /* SwiftUICharts in Frameworks */ = {isa = PBXBuildFile; productRef = E0071B232B0A110400E55EC5 /* SwiftUICharts */; };
 		E00A61B42B08C528008F1A25 /* GoalSelectorView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E00A61B32B08C528008F1A25 /* GoalSelectorView.swift */; };
 		E027F3EC2B07F38D00A2F661 /* ActivityRingView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E027F3EB2B07F38D00A2F661 /* ActivityRingView.swift */; };
 		E027F3EF2B07FA8900A2F661 /* HealthKitManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = E027F3EE2B07FA8900A2F661 /* HealthKitManager.swift */; };
@@ -34,6 +36,7 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		E0071B202B0A109000E55EC5 /* BarChartView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BarChartView.swift; sourceTree = "<group>"; };
 		E00A61B32B08C528008F1A25 /* GoalSelectorView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GoalSelectorView.swift; sourceTree = "<group>"; };
 		E027F3EB2B07F38D00A2F661 /* ActivityRingView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ActivityRingView.swift; sourceTree = "<group>"; };
 		E027F3ED2B07FA3600A2F661 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist; path = Info.plist; sourceTree = "<group>"; };
@@ -66,6 +69,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				E0071B242B0A110400E55EC5 /* SwiftUICharts in Frameworks */,
 				E046611A2B075A7A00F72A1D /* MKRingProgressView in Frameworks */,
 				E04661172B075A4B00F72A1D /* FSCalendar in Frameworks */,
 			);
@@ -78,6 +82,7 @@
 			isa = PBXGroup;
 			children = (
 				E027F3EB2B07F38D00A2F661 /* ActivityRingView.swift */,
+				E0071B202B0A109000E55EC5 /* BarChartView.swift */,
 				E080AD342B05161D00A0EC77 /* ActivityCardView.swift */,
 				E00A61B32B08C528008F1A25 /* GoalSelectorView.swift */,
 				E0A34B212B0937ED00E8AA93 /* CalendarView.swift */,
@@ -180,6 +185,7 @@
 			packageProductDependencies = (
 				E04661162B075A4B00F72A1D /* FSCalendar */,
 				E04661192B075A7A00F72A1D /* MKRingProgressView */,
+				E0071B232B0A110400E55EC5 /* SwiftUICharts */,
 			);
 			productName = Fitness;
 			productReference = E07711C22B0380D800572C4A /* Fitness.app */;
@@ -212,6 +218,7 @@
 			packageReferences = (
 				E04661152B075A4B00F72A1D /* XCRemoteSwiftPackageReference "FSCalendar" */,
 				E04661182B075A7A00F72A1D /* XCRemoteSwiftPackageReference "MKRingProgressView" */,
+				E0071B222B0A110400E55EC5 /* XCRemoteSwiftPackageReference "SwiftUICharts" */,
 			);
 			productRefGroup = E07711C32B0380D800572C4A /* Products */;
 			projectDirPath = "";
@@ -250,6 +257,7 @@
 				E0B2CF142B066F0500F3B7E7 /* User.swift in Sources */,
 				E094E8E92B057D9300AE3B69 /* LoginView.swift in Sources */,
 				E080AD2E2B04DACD00A0EC77 /* AccountView.swift in Sources */,
+				E0071B212B0A109000E55EC5 /* BarChartView.swift in Sources */,
 				E0A34B1C2B092AA700E8AA93 /* ActivityView.swift in Sources */,
 				E0A34B222B0937ED00E8AA93 /* CalendarView.swift in Sources */,
 				E00A61B42B08C528008F1A25 /* GoalSelectorView.swift in Sources */,
@@ -478,6 +486,14 @@
 /* End XCConfigurationList section */
 
 /* Begin XCRemoteSwiftPackageReference section */
+		E0071B222B0A110400E55EC5 /* XCRemoteSwiftPackageReference "SwiftUICharts" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/willdale/SwiftUICharts.git";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 2.10.2;
+			};
+		};
 		E04661152B075A4B00F72A1D /* XCRemoteSwiftPackageReference "FSCalendar" */ = {
 			isa = XCRemoteSwiftPackageReference;
 			repositoryURL = "https://github.com/WenchaoD/FSCalendar.git";
@@ -497,6 +513,11 @@
 /* End XCRemoteSwiftPackageReference section */
 
 /* Begin XCSwiftPackageProductDependency section */
+		E0071B232B0A110400E55EC5 /* SwiftUICharts */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = E0071B222B0A110400E55EC5 /* XCRemoteSwiftPackageReference "SwiftUICharts" */;
+			productName = SwiftUICharts;
+		};
 		E04661162B075A4B00F72A1D /* FSCalendar */ = {
 			isa = XCSwiftPackageProductDependency;
 			package = E04661152B075A4B00F72A1D /* XCRemoteSwiftPackageReference "FSCalendar" */;

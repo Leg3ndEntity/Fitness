@@ -17,6 +17,15 @@
         "revision" : "660888aab1d2ab0ed7eb9eb53caec12af4955fa7",
         "version" : "2.3.0"
       }
+    },
+    {
+      "identity" : "swiftuicharts",
+      "kind" : "remoteSourceControl",
+      "location" : "https://github.com/willdale/SwiftUICharts.git",
+      "state" : {
+        "revision" : "53a3a2f16730af6709283f83a9dc75a3dde252ff",
+        "version" : "2.10.2"
+      }
     }
   ],
   "version" : 2
