@@ -95,7 +95,3 @@ struct GoalSelectorView: View {
             .fontWeight(.black)
     }
 }
-
-//#Preview {
-//    GoalSelectorView(counter: $counter)
-//}

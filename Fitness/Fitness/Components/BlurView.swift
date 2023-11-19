@@ -26,7 +26,3 @@ struct BlurView: UIViewRepresentable {
     func updateUIView(_ uiView: UIView, context: UIViewRepresentableContext<BlurView>) {}
     
 }
-
-#Preview {
-    BlurView(style: .dark)
-}

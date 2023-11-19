@@ -22,8 +22,3 @@ struct ChartView: View {
         }
     }
 }
-
-#Preview {
-    ChartView()
-        .environmentObject(HealthKitManager())
-}
