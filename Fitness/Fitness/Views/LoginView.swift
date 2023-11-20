@@ -30,10 +30,6 @@ struct LoginView: View {
         return dateFormatter.string(from: date)
     }
     
-    func formattedText(bho: String) -> String{
-        return bho
-    }
-    
     var selectedText: String {
         switch num2 {
         case 1:

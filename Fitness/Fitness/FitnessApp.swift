@@ -19,6 +19,7 @@ struct FitnessApp: App {
                 .environmentObject(healthKitManager)
                 .preferredColorScheme(.dark)
                 .onAppear{
+                    healthKitManager.requestAuthorization()
                     healthKitManager.startEnergyQuery(quantityTypeIdentifier: .activeEnergyBurned)
 //                    healthKitManager.startExerciseQuery(quantityTypeIdentifier: .appleExerciseTime)
 //                    healthKitManager.startStandQuery(quantityTypeIdentifier: .appleStandTime)

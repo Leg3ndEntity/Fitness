@@ -8,6 +8,9 @@
 import SwiftUI
 
 struct MainPageView: View {
+    @StateObject private var sharedData = SharedData()
+    @StateObject var healthKitManager = HealthKitManager()
+    
     let currentDateTime = Date()
     @State var isShowingAccount: Bool = false
     @State var isShowingLogin: Bool = true
@@ -22,6 +25,7 @@ struct MainPageView: View {
     
     var body: some View {
         NavigationStack{
+            
             ScrollView {
                 VStack(alignment: .leading) {
                     HStack{
@@ -51,14 +55,19 @@ struct MainPageView: View {
                 }
             }.scrollIndicators(.hidden)
             
-            
+        }.onAppear {
+            healthKitManager.requestAuthorization()
+            healthKitManager.startEnergyQuery(quantityTypeIdentifier: .activeEnergyBurned)
+            healthKitManager.startStepQuery(quantityTypeIdentifier: .stepCount)
+            healthKitManager.startWalkQuery(quantityTypeIdentifier: .distanceWalkingRunning)
         }
+        //.navigationBarBackButtonHidden(true)
         .sheet(isPresented: $isShowingAccount, content: {
             ModalView().presentationDetents([.large])
         })
-        //        .fullScreenCover(isPresented: $isShowingLogin, content: {
-        //            LoginView(height: "", weight: "")
-        //        })
+//        .fullScreenCover(isPresented: $isShowingLogin, content: {
+//            LoginView(height: "", weight: "")
+//        })
         .fullScreenCover(isPresented: $isShowingGoal, content: {
             GoalView()
         })
